@@ -64,12 +64,12 @@ export PATH=$PATH:${SNAP_ROOT}/software/tools:${ACTION_ROOT}/sw
 ####iHELLOWORLD ##########################################################
 
 function test_helloworld {
-    cmd="echo \"Hello world. This is my first CAPI SNAP experience. It's real fun.\" > tin"
-    echo "cmd: ${cmd}"
-    eval ${cmd}
-    cmd="echo \"HELLO WORLD. THIS IS MY FIRST CAPI SNAP EXPERIENCE. IT'S REAL FUN.\" > tCAP"
-    echo "cmd: ${cmd}"
-    eval ${cmd}
+    //cmd="echo \"Hello world. This is my first CAPI SNAP experience. It's real fun.\" > tin"
+    //echo "cmd: ${cmd}"
+    //eval ${cmd}
+    //cmd="echo \"HELLO WORLD. THIS IS MY FIRST CAPI SNAP EXPERIENCE. IT'S REAL FUN.\" > tCAP"
+    //echo "cmd: ${cmd}"
+    //eval ${cmd}
     echo -n "Doing snap_helloworld "
     cmd="snap_helloworld -C${snap_card} -i tin -o tout >> snap_helloworld.log 2>&1"
     eval ${cmd}
