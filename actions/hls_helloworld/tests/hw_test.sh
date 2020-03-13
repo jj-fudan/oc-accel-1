@@ -71,7 +71,7 @@ function test_helloworld {
     #echo "cmd: ${cmd}"
     #eval ${cmd}
     echo -n "Doing snap_helloworld "
-    cmd="snap_helloworld -C${snap_card} -i /home/jjiao/oc-accel/actions/hls_helloworld/tests/tin -o tout >> snap_helloworld.log 2>&1"
+    cmd="snap_helloworld -C${snap_card} -i tin -o tout >> snap_helloworld.log 2>&1"
     eval ${cmd}
     if [ $? -ne 0 ]; then
 	cat snap_helloworld.log
@@ -82,7 +82,7 @@ function test_helloworld {
     echo "ok"
 
     echo -n "Check results ... "
-    cmp tout /home/jjiao/oc-accel/actions/hls_helloworld/tests/tCAP 2>&1 > /dev/null
+    cmp tout tCAP 2>&1 > /dev/null
     if [ $? -ne 0 ]; then
 	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 	echo "                 TEST FAILED !"
