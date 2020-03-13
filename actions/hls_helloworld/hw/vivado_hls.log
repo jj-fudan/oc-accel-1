@@ -1,0 +1,93 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /home/Xilinx/Vivado/2019.2/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/home/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'jjiao' on host 'vipdev1' (Linux_x86_64 version 3.10.0-862.14.4.el7.x86_64) on Fri Mar 13 07:04:25 CST 2020
+INFO: [HLS 200-10] On os "CentOS Linux release 7.6.1810 (Core) "
+INFO: [HLS 200-10] In directory '/home/jjiao/oc-accel/actions/hls_helloworld/hw'
+Sourcing Tcl script 'run_hls_script.tcl'
+INFO: [HLS 200-10] Opening project '/home/jjiao/oc-accel/actions/hls_helloworld/hw/hlsUpperCase_xcvu33p-fsvh2104-2-e'.
+INFO: [HLS 200-10] Adding design file 'action_uppercase.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'action_uppercase.cpp' to the project
+INFO: [HLS 200-10] Opening solution '/home/jjiao/oc-accel/actions/hls_helloworld/hw/hlsUpperCase_xcvu33p-fsvh2104-2-e/helloworld'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
+INFO: [HLS 200-10] Setting target device to 'xcvu33p-fsvh2104-2-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'action_uppercase.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:32 . Memory (MB): peak = 1066.891 ; gain = 546.949 ; free physical = 1280 ; free virtual = 162371
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:32 . Memory (MB): peak = 1066.891 ; gain = 546.949 ; free physical = 1280 ; free virtual = 162371
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-501] Unrolling loop 'TDL' (action_uppercase.cpp:66) in function 'process_action(ap_uint<512>*, ap_uint<512>*, action_reg*)': changing partial unrolling into complete unrolling since the unrolling factor (=3) is no less than the loop trip count (=3).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:15 ; elapsed = 00:00:33 . Memory (MB): peak = 1066.891 ; gain = 546.949 ; free physical = 1237 ; free virtual = 162313
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:16 ; elapsed = 00:00:33 . Memory (MB): peak = 1066.891 ; gain = 546.949 ; free physical = 1258 ; free virtual = 162309
+INFO: [XFORM 203-1101] Packing variable 'act_reg' (action_uppercase.cpp:94) into a 992-bit variable.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'main_loop' (action_uppercase.cpp:46) in function 'process_action' for pipelining.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'uppercase_conversion' (action_uppercase.cpp:63) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'TDL' (action_uppercase.cpp:66) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'uppercase_conversion' (action_uppercase.cpp:63) in function 'process_action' completely with a factor of 64.
+INFO: [HLS 200-489] Unrolling loop 'TDL' (action_uppercase.cpp:66) in function 'process_action' completely with a factor of 3.
+INFO: [XFORM 203-102] Partitioning array 'xin' (action_uppercase.cpp:48) automatically.
+INFO: [XFORM 203-102] Partitioning array 'acc' (action_uppercase.cpp:53) automatically.
+INFO: [XFORM 203-101] Partitioning array 'shift_reg'  in dimension 1 completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'process_action' (action_uppercase.cpp:32)...192 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 1066.891 ; gain = 546.949 ; free physical = 1248 ; free virtual = 162315
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:35 . Memory (MB): peak = 1066.891 ; gain = 546.949 ; free physical = 1252 ; free virtual = 162311
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'hls_action' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'process_action' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'main_loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 16.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 34.89 seconds; current allocated memory: 124.691 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.24 seconds; current allocated memory: 126.072 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hls_action' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.31 seconds; current allocated memory: 126.319 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 126.473 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'process_action' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'shift_reg_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg_0' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'process_action'.
+INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 128.985 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hls_action' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_action/host_mem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_action/din_gmem_V' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_action/dout_gmem_V' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_action/act_reg' to 's_axilite & ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'hls_action' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'din_gmem_V', 'dout_gmem_V', 'act_reg' to AXI-Lite port ctrl_reg.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hls_action'.
+INFO: [HLS 200-111]  Elapsed time: 0.85 seconds; current allocated memory: 134.654 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 285.71 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:19 ; elapsed = 00:00:38 . Memory (MB): peak = 1066.891 ; gain = 546.949 ; free physical = 1207 ; free virtual = 162286
+INFO: [VHDL 208-304] Generating VHDL RTL for hls_action.
+INFO: [VLOG 209-307] Generating Verilog RTL for hls_action.
+INFO: [HLS 200-112] Total elapsed time: 38.35 seconds; peak allocated memory: 134.654 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Fri Mar 13 07:04:48 2020...

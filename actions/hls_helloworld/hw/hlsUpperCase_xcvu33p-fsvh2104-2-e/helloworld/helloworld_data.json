@@ -1,0 +1,2633 @@
+{
+  "Top": "hls_action",
+  "RtlTop": "hls_action",
+  "RtlPrefix": "",
+  "SourceLanguage": "cpp",
+  "ResetStyle": "control",
+  "GenerateBdFiles": "0",
+  "HostMachineBits": "64",
+  "Target": {
+    "Family": "virtexuplushbm",
+    "Device": "xcvu33p",
+    "Package": "-fsvh2104",
+    "Speed": "-2-e"
+  },
+  "HlsSolution": {"Config": ["config_interface -m_axi_addr64=1"]},
+  "Args": {
+    "din_gmem": {
+      "index": "0",
+      "type": {
+        "kinds": ["pointer"],
+        "dataType": "ap_uint",
+        "interfaceRef": "s_axi_ctrl_reg",
+        "registerRefs": [
+          "din_gmem_V_1",
+          "din_gmem_V_2"
+        ]
+      }
+    },
+    "dout_gmem": {
+      "index": "1",
+      "type": {
+        "kinds": ["pointer"],
+        "dataType": "ap_uint",
+        "interfaceRef": "s_axi_ctrl_reg",
+        "registerRefs": [
+          "dout_gmem_V_1",
+          "dout_gmem_V_2"
+        ]
+      }
+    },
+    "act_reg": {
+      "index": "2",
+      "type": {
+        "kinds": [
+          "struct",
+          "pointer"
+        ],
+        "dataType": "action_reg",
+        "structImpl": "interface",
+        "dataPack": true,
+        "fields": {
+          "Control": {
+            "order": "0",
+            "kinds": ["struct"],
+            "dataType": "CONTROL",
+            "structImpl": "flat-field",
+            "dataPack": true,
+            "fields": {
+              "sat": {
+                "order": "0",
+                "dataType": "ap_uint",
+                "structImpl": "flat-field",
+                "dataPack": true
+              },
+              "flags": {
+                "order": "1",
+                "dataType": "ap_uint",
+                "structImpl": "flat-field",
+                "dataPack": true
+              },
+              "seq": {
+                "order": "2",
+                "dataType": "ap_uint",
+                "structImpl": "flat-field",
+                "dataPack": true
+              },
+              "Retc": {
+                "order": "3",
+                "dataType": "ap_uint",
+                "structImpl": "flat-field",
+                "dataPack": true
+              },
+              "Reserved": {
+                "order": "4",
+                "dataType": "ap_uint",
+                "structImpl": "flat-field",
+                "dataPack": true
+              }
+            }
+          },
+          "Data": {
+            "order": "1",
+            "kinds": ["struct"],
+            "dataType": "helloworld_job_t",
+            "structImpl": "flat-field",
+            "dataPack": true,
+            "fields": {
+              "in": {
+                "order": "0",
+                "kinds": ["struct"],
+                "dataType": "snap_addr",
+                "structImpl": "flat-field",
+                "dataPack": true,
+                "fields": {
+                  "addr": {
+                    "order": "0",
+                    "dataType": "long",
+                    "dataWidth": "64",
+                    "interfaceRef": "s_axi_ctrl_reg",
+                    "bitMap": "191:128",
+                    "registerRefs": [
+                      "act_reg_i_1",
+                      "act_reg_i_2",
+                      "act_reg_i_3",
+                      "act_reg_i_4",
+                      "act_reg_i_5",
+                      "act_reg_i_6",
+                      "act_reg_i_7",
+                      "act_reg_i_8",
+                      "act_reg_i_9",
+                      "act_reg_i_10",
+                      "act_reg_i_11",
+                      "act_reg_i_12",
+                      "act_reg_i_13",
+                      "act_reg_i_14",
+                      "act_reg_i_15",
+                      "act_reg_i_16",
+                      "act_reg_i_17",
+                      "act_reg_i_18",
+                      "act_reg_i_19",
+                      "act_reg_i_20",
+                      "act_reg_i_21",
+                      "act_reg_i_22",
+                      "act_reg_i_23",
+                      "act_reg_i_24",
+                      "act_reg_i_25",
+                      "act_reg_i_26",
+                      "act_reg_i_27",
+                      "act_reg_i_28",
+                      "act_reg_i_29",
+                      "act_reg_i_30",
+                      "act_reg_i_31",
+                      "act_reg_o_1",
+                      "act_reg_o_2",
+                      "act_reg_o_3",
+                      "act_reg_o_4",
+                      "act_reg_o_5",
+                      "act_reg_o_6",
+                      "act_reg_o_7",
+                      "act_reg_o_8",
+                      "act_reg_o_9",
+                      "act_reg_o_10",
+                      "act_reg_o_11",
+                      "act_reg_o_12",
+                      "act_reg_o_13",
+                      "act_reg_o_14",
+                      "act_reg_o_15",
+                      "act_reg_o_16",
+                      "act_reg_o_17",
+                      "act_reg_o_18",
+                      "act_reg_o_19",
+                      "act_reg_o_20",
+                      "act_reg_o_21",
+                      "act_reg_o_22",
+                      "act_reg_o_23",
+                      "act_reg_o_24",
+                      "act_reg_o_25",
+                      "act_reg_o_26",
+                      "act_reg_o_27",
+                      "act_reg_o_28",
+                      "act_reg_o_29",
+                      "act_reg_o_30",
+                      "act_reg_o_31"
+                    ],
+                    "structImpl": "field",
+                    "dataPack": true
+                  },
+                  "size": {
+                    "order": "1",
+                    "dataType": "unsigned",
+                    "dataWidth": "32",
+                    "interfaceRef": "s_axi_ctrl_reg",
+                    "bitMap": "223:192",
+                    "registerRefs": [
+                      "act_reg_i_1",
+                      "act_reg_i_2",
+                      "act_reg_i_3",
+                      "act_reg_i_4",
+                      "act_reg_i_5",
+                      "act_reg_i_6",
+                      "act_reg_i_7",
+                      "act_reg_i_8",
+                      "act_reg_i_9",
+                      "act_reg_i_10",
+                      "act_reg_i_11",
+                      "act_reg_i_12",
+                      "act_reg_i_13",
+                      "act_reg_i_14",
+                      "act_reg_i_15",
+                      "act_reg_i_16",
+                      "act_reg_i_17",
+                      "act_reg_i_18",
+                      "act_reg_i_19",
+                      "act_reg_i_20",
+                      "act_reg_i_21",
+                      "act_reg_i_22",
+                      "act_reg_i_23",
+                      "act_reg_i_24",
+                      "act_reg_i_25",
+                      "act_reg_i_26",
+                      "act_reg_i_27",
+                      "act_reg_i_28",
+                      "act_reg_i_29",
+                      "act_reg_i_30",
+                      "act_reg_i_31",
+                      "act_reg_o_1",
+                      "act_reg_o_2",
+                      "act_reg_o_3",
+                      "act_reg_o_4",
+                      "act_reg_o_5",
+                      "act_reg_o_6",
+                      "act_reg_o_7",
+                      "act_reg_o_8",
+                      "act_reg_o_9",
+                      "act_reg_o_10",
+                      "act_reg_o_11",
+                      "act_reg_o_12",
+                      "act_reg_o_13",
+                      "act_reg_o_14",
+                      "act_reg_o_15",
+                      "act_reg_o_16",
+                      "act_reg_o_17",
+                      "act_reg_o_18",
+                      "act_reg_o_19",
+                      "act_reg_o_20",
+                      "act_reg_o_21",
+                      "act_reg_o_22",
+                      "act_reg_o_23",
+                      "act_reg_o_24",
+                      "act_reg_o_25",
+                      "act_reg_o_26",
+                      "act_reg_o_27",
+                      "act_reg_o_28",
+                      "act_reg_o_29",
+                      "act_reg_o_30",
+                      "act_reg_o_31"
+                    ],
+                    "structImpl": "field",
+                    "dataPack": true
+                  },
+                  "type": {
+                    "order": "2",
+                    "dataType": "unsigned",
+                    "dataWidth": "16",
+                    "interfaceRef": "s_axi_ctrl_reg",
+                    "bitMap": "239:224",
+                    "registerRefs": [
+                      "act_reg_i_1",
+                      "act_reg_i_2",
+                      "act_reg_i_3",
+                      "act_reg_i_4",
+                      "act_reg_i_5",
+                      "act_reg_i_6",
+                      "act_reg_i_7",
+                      "act_reg_i_8",
+                      "act_reg_i_9",
+                      "act_reg_i_10",
+                      "act_reg_i_11",
+                      "act_reg_i_12",
+                      "act_reg_i_13",
+                      "act_reg_i_14",
+                      "act_reg_i_15",
+                      "act_reg_i_16",
+                      "act_reg_i_17",
+                      "act_reg_i_18",
+                      "act_reg_i_19",
+                      "act_reg_i_20",
+                      "act_reg_i_21",
+                      "act_reg_i_22",
+                      "act_reg_i_23",
+                      "act_reg_i_24",
+                      "act_reg_i_25",
+                      "act_reg_i_26",
+                      "act_reg_i_27",
+                      "act_reg_i_28",
+                      "act_reg_i_29",
+                      "act_reg_i_30",
+                      "act_reg_i_31",
+                      "act_reg_o_1",
+                      "act_reg_o_2",
+                      "act_reg_o_3",
+                      "act_reg_o_4",
+                      "act_reg_o_5",
+                      "act_reg_o_6",
+                      "act_reg_o_7",
+                      "act_reg_o_8",
+                      "act_reg_o_9",
+                      "act_reg_o_10",
+                      "act_reg_o_11",
+                      "act_reg_o_12",
+                      "act_reg_o_13",
+                      "act_reg_o_14",
+                      "act_reg_o_15",
+                      "act_reg_o_16",
+                      "act_reg_o_17",
+                      "act_reg_o_18",
+                      "act_reg_o_19",
+                      "act_reg_o_20",
+                      "act_reg_o_21",
+                      "act_reg_o_22",
+                      "act_reg_o_23",
+                      "act_reg_o_24",
+                      "act_reg_o_25",
+                      "act_reg_o_26",
+                      "act_reg_o_27",
+                      "act_reg_o_28",
+                      "act_reg_o_29",
+                      "act_reg_o_30",
+                      "act_reg_o_31"
+                    ],
+                    "structImpl": "field",
+                    "dataPack": true
+                  },
+                  "flags": {
+                    "order": "3",
+                    "dataType": "unsigned",
+                    "dataWidth": "16",
+                    "interfaceRef": "s_axi_ctrl_reg",
+                    "bitMap": "255:240",
+                    "registerRefs": [
+                      "act_reg_i_1",
+                      "act_reg_i_2",
+                      "act_reg_i_3",
+                      "act_reg_i_4",
+                      "act_reg_i_5",
+                      "act_reg_i_6",
+                      "act_reg_i_7",
+                      "act_reg_i_8",
+                      "act_reg_i_9",
+                      "act_reg_i_10",
+                      "act_reg_i_11",
+                      "act_reg_i_12",
+                      "act_reg_i_13",
+                      "act_reg_i_14",
+                      "act_reg_i_15",
+                      "act_reg_i_16",
+                      "act_reg_i_17",
+                      "act_reg_i_18",
+                      "act_reg_i_19",
+                      "act_reg_i_20",
+                      "act_reg_i_21",
+                      "act_reg_i_22",
+                      "act_reg_i_23",
+                      "act_reg_i_24",
+                      "act_reg_i_25",
+                      "act_reg_i_26",
+                      "act_reg_i_27",
+                      "act_reg_i_28",
+                      "act_reg_i_29",
+                      "act_reg_i_30",
+                      "act_reg_i_31",
+                      "act_reg_o_1",
+                      "act_reg_o_2",
+                      "act_reg_o_3",
+                      "act_reg_o_4",
+                      "act_reg_o_5",
+                      "act_reg_o_6",
+                      "act_reg_o_7",
+                      "act_reg_o_8",
+                      "act_reg_o_9",
+                      "act_reg_o_10",
+                      "act_reg_o_11",
+                      "act_reg_o_12",
+                      "act_reg_o_13",
+                      "act_reg_o_14",
+                      "act_reg_o_15",
+                      "act_reg_o_16",
+                      "act_reg_o_17",
+                      "act_reg_o_18",
+                      "act_reg_o_19",
+                      "act_reg_o_20",
+                      "act_reg_o_21",
+                      "act_reg_o_22",
+                      "act_reg_o_23",
+                      "act_reg_o_24",
+                      "act_reg_o_25",
+                      "act_reg_o_26",
+                      "act_reg_o_27",
+                      "act_reg_o_28",
+                      "act_reg_o_29",
+                      "act_reg_o_30",
+                      "act_reg_o_31"
+                    ],
+                    "structImpl": "field",
+                    "dataPack": true
+                  }
+                }
+              },
+              "out": {
+                "order": "1",
+                "kinds": ["struct"],
+                "dataType": "snap_addr",
+                "structImpl": "flat-field",
+                "dataPack": true,
+                "fields": {
+                  "addr": {
+                    "order": "0",
+                    "dataType": "long",
+                    "dataWidth": "64",
+                    "interfaceRef": "s_axi_ctrl_reg",
+                    "bitMap": "319:256",
+                    "registerRefs": [
+                      "act_reg_i_1",
+                      "act_reg_i_2",
+                      "act_reg_i_3",
+                      "act_reg_i_4",
+                      "act_reg_i_5",
+                      "act_reg_i_6",
+                      "act_reg_i_7",
+                      "act_reg_i_8",
+                      "act_reg_i_9",
+                      "act_reg_i_10",
+                      "act_reg_i_11",
+                      "act_reg_i_12",
+                      "act_reg_i_13",
+                      "act_reg_i_14",
+                      "act_reg_i_15",
+                      "act_reg_i_16",
+                      "act_reg_i_17",
+                      "act_reg_i_18",
+                      "act_reg_i_19",
+                      "act_reg_i_20",
+                      "act_reg_i_21",
+                      "act_reg_i_22",
+                      "act_reg_i_23",
+                      "act_reg_i_24",
+                      "act_reg_i_25",
+                      "act_reg_i_26",
+                      "act_reg_i_27",
+                      "act_reg_i_28",
+                      "act_reg_i_29",
+                      "act_reg_i_30",
+                      "act_reg_i_31",
+                      "act_reg_o_1",
+                      "act_reg_o_2",
+                      "act_reg_o_3",
+                      "act_reg_o_4",
+                      "act_reg_o_5",
+                      "act_reg_o_6",
+                      "act_reg_o_7",
+                      "act_reg_o_8",
+                      "act_reg_o_9",
+                      "act_reg_o_10",
+                      "act_reg_o_11",
+                      "act_reg_o_12",
+                      "act_reg_o_13",
+                      "act_reg_o_14",
+                      "act_reg_o_15",
+                      "act_reg_o_16",
+                      "act_reg_o_17",
+                      "act_reg_o_18",
+                      "act_reg_o_19",
+                      "act_reg_o_20",
+                      "act_reg_o_21",
+                      "act_reg_o_22",
+                      "act_reg_o_23",
+                      "act_reg_o_24",
+                      "act_reg_o_25",
+                      "act_reg_o_26",
+                      "act_reg_o_27",
+                      "act_reg_o_28",
+                      "act_reg_o_29",
+                      "act_reg_o_30",
+                      "act_reg_o_31"
+                    ],
+                    "structImpl": "field",
+                    "dataPack": true
+                  },
+                  "size": {
+                    "order": "1",
+                    "dataType": "unsigned",
+                    "dataWidth": "32",
+                    "interfaceRef": "s_axi_ctrl_reg",
+                    "bitMap": "351:320",
+                    "registerRefs": [
+                      "act_reg_i_1",
+                      "act_reg_i_2",
+                      "act_reg_i_3",
+                      "act_reg_i_4",
+                      "act_reg_i_5",
+                      "act_reg_i_6",
+                      "act_reg_i_7",
+                      "act_reg_i_8",
+                      "act_reg_i_9",
+                      "act_reg_i_10",
+                      "act_reg_i_11",
+                      "act_reg_i_12",
+                      "act_reg_i_13",
+                      "act_reg_i_14",
+                      "act_reg_i_15",
+                      "act_reg_i_16",
+                      "act_reg_i_17",
+                      "act_reg_i_18",
+                      "act_reg_i_19",
+                      "act_reg_i_20",
+                      "act_reg_i_21",
+                      "act_reg_i_22",
+                      "act_reg_i_23",
+                      "act_reg_i_24",
+                      "act_reg_i_25",
+                      "act_reg_i_26",
+                      "act_reg_i_27",
+                      "act_reg_i_28",
+                      "act_reg_i_29",
+                      "act_reg_i_30",
+                      "act_reg_i_31",
+                      "act_reg_o_1",
+                      "act_reg_o_2",
+                      "act_reg_o_3",
+                      "act_reg_o_4",
+                      "act_reg_o_5",
+                      "act_reg_o_6",
+                      "act_reg_o_7",
+                      "act_reg_o_8",
+                      "act_reg_o_9",
+                      "act_reg_o_10",
+                      "act_reg_o_11",
+                      "act_reg_o_12",
+                      "act_reg_o_13",
+                      "act_reg_o_14",
+                      "act_reg_o_15",
+                      "act_reg_o_16",
+                      "act_reg_o_17",
+                      "act_reg_o_18",
+                      "act_reg_o_19",
+                      "act_reg_o_20",
+                      "act_reg_o_21",
+                      "act_reg_o_22",
+                      "act_reg_o_23",
+                      "act_reg_o_24",
+                      "act_reg_o_25",
+                      "act_reg_o_26",
+                      "act_reg_o_27",
+                      "act_reg_o_28",
+                      "act_reg_o_29",
+                      "act_reg_o_30",
+                      "act_reg_o_31"
+                    ],
+                    "structImpl": "field",
+                    "dataPack": true
+                  },
+                  "type": {
+                    "order": "2",
+                    "dataType": "unsigned",
+                    "dataWidth": "16",
+                    "interfaceRef": "s_axi_ctrl_reg",
+                    "bitMap": "367:352",
+                    "registerRefs": [
+                      "act_reg_i_1",
+                      "act_reg_i_2",
+                      "act_reg_i_3",
+                      "act_reg_i_4",
+                      "act_reg_i_5",
+                      "act_reg_i_6",
+                      "act_reg_i_7",
+                      "act_reg_i_8",
+                      "act_reg_i_9",
+                      "act_reg_i_10",
+                      "act_reg_i_11",
+                      "act_reg_i_12",
+                      "act_reg_i_13",
+                      "act_reg_i_14",
+                      "act_reg_i_15",
+                      "act_reg_i_16",
+                      "act_reg_i_17",
+                      "act_reg_i_18",
+                      "act_reg_i_19",
+                      "act_reg_i_20",
+                      "act_reg_i_21",
+                      "act_reg_i_22",
+                      "act_reg_i_23",
+                      "act_reg_i_24",
+                      "act_reg_i_25",
+                      "act_reg_i_26",
+                      "act_reg_i_27",
+                      "act_reg_i_28",
+                      "act_reg_i_29",
+                      "act_reg_i_30",
+                      "act_reg_i_31",
+                      "act_reg_o_1",
+                      "act_reg_o_2",
+                      "act_reg_o_3",
+                      "act_reg_o_4",
+                      "act_reg_o_5",
+                      "act_reg_o_6",
+                      "act_reg_o_7",
+                      "act_reg_o_8",
+                      "act_reg_o_9",
+                      "act_reg_o_10",
+                      "act_reg_o_11",
+                      "act_reg_o_12",
+                      "act_reg_o_13",
+                      "act_reg_o_14",
+                      "act_reg_o_15",
+                      "act_reg_o_16",
+                      "act_reg_o_17",
+                      "act_reg_o_18",
+                      "act_reg_o_19",
+                      "act_reg_o_20",
+                      "act_reg_o_21",
+                      "act_reg_o_22",
+                      "act_reg_o_23",
+                      "act_reg_o_24",
+                      "act_reg_o_25",
+                      "act_reg_o_26",
+                      "act_reg_o_27",
+                      "act_reg_o_28",
+                      "act_reg_o_29",
+                      "act_reg_o_30",
+                      "act_reg_o_31"
+                    ],
+                    "structImpl": "field",
+                    "dataPack": true
+                  },
+                  "flags": {
+                    "order": "3",
+                    "dataType": "unsigned",
+                    "dataWidth": "16",
+                    "interfaceRef": "s_axi_ctrl_reg",
+                    "bitMap": "383:368",
+                    "registerRefs": [
+                      "act_reg_i_1",
+                      "act_reg_i_2",
+                      "act_reg_i_3",
+                      "act_reg_i_4",
+                      "act_reg_i_5",
+                      "act_reg_i_6",
+                      "act_reg_i_7",
+                      "act_reg_i_8",
+                      "act_reg_i_9",
+                      "act_reg_i_10",
+                      "act_reg_i_11",
+                      "act_reg_i_12",
+                      "act_reg_i_13",
+                      "act_reg_i_14",
+                      "act_reg_i_15",
+                      "act_reg_i_16",
+                      "act_reg_i_17",
+                      "act_reg_i_18",
+                      "act_reg_i_19",
+                      "act_reg_i_20",
+                      "act_reg_i_21",
+                      "act_reg_i_22",
+                      "act_reg_i_23",
+                      "act_reg_i_24",
+                      "act_reg_i_25",
+                      "act_reg_i_26",
+                      "act_reg_i_27",
+                      "act_reg_i_28",
+                      "act_reg_i_29",
+                      "act_reg_i_30",
+                      "act_reg_i_31",
+                      "act_reg_o_1",
+                      "act_reg_o_2",
+                      "act_reg_o_3",
+                      "act_reg_o_4",
+                      "act_reg_o_5",
+                      "act_reg_o_6",
+                      "act_reg_o_7",
+                      "act_reg_o_8",
+                      "act_reg_o_9",
+                      "act_reg_o_10",
+                      "act_reg_o_11",
+                      "act_reg_o_12",
+                      "act_reg_o_13",
+                      "act_reg_o_14",
+                      "act_reg_o_15",
+                      "act_reg_o_16",
+                      "act_reg_o_17",
+                      "act_reg_o_18",
+                      "act_reg_o_19",
+                      "act_reg_o_20",
+                      "act_reg_o_21",
+                      "act_reg_o_22",
+                      "act_reg_o_23",
+                      "act_reg_o_24",
+                      "act_reg_o_25",
+                      "act_reg_o_26",
+                      "act_reg_o_27",
+                      "act_reg_o_28",
+                      "act_reg_o_29",
+                      "act_reg_o_30",
+                      "act_reg_o_31"
+                    ],
+                    "structImpl": "field",
+                    "dataPack": true
+                  }
+                }
+              }
+            }
+          },
+          "padding": {
+            "order": "2",
+            "kinds": ["array"],
+            "dataType": "unsigned",
+            "dataWidth": "8",
+            "arraySizes": ["76"],
+            "interfaceRef": "s_axi_ctrl_reg",
+            "bitMap": "991:384",
+            "registerRefs": [
+              "act_reg_i_1",
+              "act_reg_i_2",
+              "act_reg_i_3",
+              "act_reg_i_4",
+              "act_reg_i_5",
+              "act_reg_i_6",
+              "act_reg_i_7",
+              "act_reg_i_8",
+              "act_reg_i_9",
+              "act_reg_i_10",
+              "act_reg_i_11",
+              "act_reg_i_12",
+              "act_reg_i_13",
+              "act_reg_i_14",
+              "act_reg_i_15",
+              "act_reg_i_16",
+              "act_reg_i_17",
+              "act_reg_i_18",
+              "act_reg_i_19",
+              "act_reg_i_20",
+              "act_reg_i_21",
+              "act_reg_i_22",
+              "act_reg_i_23",
+              "act_reg_i_24",
+              "act_reg_i_25",
+              "act_reg_i_26",
+              "act_reg_i_27",
+              "act_reg_i_28",
+              "act_reg_i_29",
+              "act_reg_i_30",
+              "act_reg_i_31",
+              "act_reg_o_1",
+              "act_reg_o_2",
+              "act_reg_o_3",
+              "act_reg_o_4",
+              "act_reg_o_5",
+              "act_reg_o_6",
+              "act_reg_o_7",
+              "act_reg_o_8",
+              "act_reg_o_9",
+              "act_reg_o_10",
+              "act_reg_o_11",
+              "act_reg_o_12",
+              "act_reg_o_13",
+              "act_reg_o_14",
+              "act_reg_o_15",
+              "act_reg_o_16",
+              "act_reg_o_17",
+              "act_reg_o_18",
+              "act_reg_o_19",
+              "act_reg_o_20",
+              "act_reg_o_21",
+              "act_reg_o_22",
+              "act_reg_o_23",
+              "act_reg_o_24",
+              "act_reg_o_25",
+              "act_reg_o_26",
+              "act_reg_o_27",
+              "act_reg_o_28",
+              "act_reg_o_29",
+              "act_reg_o_30",
+              "act_reg_o_31"
+            ],
+            "structImpl": "field",
+            "dataPack": true
+          }
+        }
+      }
+    }
+  },
+  "Return": {
+    
+  },
+  "ClockInfo": {
+    "ClockName": "ap_clk",
+    "ClockPeriod": "4",
+    "IsCombLogic": "0",
+    "II": "x",
+    "Latency": "undef",
+    "Uncertainty": "0.5"
+  },
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 4.000 [get_ports ap_clk]"]},
+  "Ipx": {
+    "Vendor": "xilinx.com",
+    "Library": "hls",
+    "Name": "hls_action",
+    "Version": "1.0",
+    "DisplayName": "Hls_action",
+    "Revision": "",
+    "Description": "An IP generated by Vivado HLS",
+    "Taxonomy": "\/VIVADO_HLS_IP",
+    "AutoFamilySupport": ""
+  },
+  "Files": {
+    "CSource": ["..\/..\/action_uppercase.cpp"],
+    "Vhdl": [
+      "impl\/vhdl\/hls_action_ctrl_reg_s_axi.vhd",
+      "impl\/vhdl\/hls_action_host_mem_m_axi.vhd",
+      "impl\/vhdl\/process_action.vhd",
+      "impl\/vhdl\/hls_action.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/hls_action_ctrl_reg_s_axi.v",
+      "impl\/verilog\/hls_action_host_mem_m_axi.v",
+      "impl\/verilog\/process_action.v",
+      "impl\/verilog\/hls_action.v"
+    ],
+    "SwDriver": [
+      "impl\/misc\/drivers\/hls_action_v1_0\/data\/hls_action.mdd",
+      "impl\/misc\/drivers\/hls_action_v1_0\/data\/hls_action.tcl",
+      "impl\/misc\/drivers\/hls_action_v1_0\/src\/Makefile",
+      "impl\/misc\/drivers\/hls_action_v1_0\/src\/xhls_action.c",
+      "impl\/misc\/drivers\/hls_action_v1_0\/src\/xhls_action.h",
+      "impl\/misc\/drivers\/hls_action_v1_0\/src\/xhls_action_hw.h",
+      "impl\/misc\/drivers\/hls_action_v1_0\/src\/xhls_action_linux.c",
+      "impl\/misc\/drivers\/hls_action_v1_0\/src\/xhls_action_sinit.c"
+    ],
+    "Misc": ["impl\/misc\/logo.png"],
+    "DesignXml": "\/home\/jjiao\/oc-accel\/actions\/hls_helloworld\/hw\/hlsUpperCase_xcvu33p-fsvh2104-2-e\/helloworld\/.autopilot\/db\/hls_action.design.xml",
+    "DebugDir": "\/home\/jjiao\/oc-accel\/actions\/hls_helloworld\/hw\/hlsUpperCase_xcvu33p-fsvh2104-2-e\/helloworld\/.debug",
+    "ProtoInst": ["\/home\/jjiao\/oc-accel\/actions\/hls_helloworld\/hw\/hlsUpperCase_xcvu33p-fsvh2104-2-e\/helloworld\/.debug\/hls_action.protoinst"]
+  },
+  "SubcoreInfo": {
+    "HasXpmMemory": false,
+    "HasClockedDsp": false,
+    "IP": []
+  },
+  "Interfaces": {
+    "ap_clk": {
+      "type": "clock",
+      "ctype": {"CLK": {"Type": "bool"}},
+      "bundle_name": "ap_clk",
+      "bundle_role": "default",
+      "buses": "s_axi_ctrl_reg m_axi_host_mem",
+      "reset": "ap_rst_n"
+    },
+    "ap_rst_n": {
+      "type": "reset",
+      "polarity": "ACTIVE_LOW",
+      "ctype": {"RST": {"Type": "bool"}},
+      "bundle_name": "ap_rst_n",
+      "bundle_role": "default"
+    },
+    "interrupt": {
+      "type": "interrupt",
+      "ctype": {"INTERRUPT": {"Type": "bool"}},
+      "bundle_name": "ctrl_reg",
+      "bundle_role": "interrupt"
+    },
+    "m_axi_host_mem": {
+      "type": "native_axim",
+      "is_adaptor": "true",
+      "mode": "master",
+      "port_prefix": "m_axi_host_mem",
+      "data_width": "512",
+      "param_prefix": "C_M_AXI_HOST_MEM",
+      "ctype": {
+        "AWLEN": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        },
+        "AWSIZE": {
+          "Type": "integer unsigned",
+          "Width": "3"
+        },
+        "AWBURST": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "AWLOCK": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "AWREGION": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "AWCACHE": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "AWPROT": {
+          "Type": "integer unsigned",
+          "Width": "3"
+        },
+        "AWQOS": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "AWVALID": {"Type": "bool"},
+        "AWREADY": {"Type": "bool"},
+        "WLAST": {"Type": "bool"},
+        "WVALID": {"Type": "bool"},
+        "WREADY": {"Type": "bool"},
+        "BVALID": {"Type": "bool"},
+        "BREADY": {"Type": "bool"},
+        "BRESP": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "ARLEN": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        },
+        "ARSIZE": {
+          "Type": "integer unsigned",
+          "Width": "3"
+        },
+        "ARBURST": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "ARLOCK": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "ARREGION": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "ARCACHE": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "ARPROT": {
+          "Type": "integer unsigned",
+          "Width": "3"
+        },
+        "ARQOS": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "ARVALID": {"Type": "bool"},
+        "ARREADY": {"Type": "bool"},
+        "RLAST": {"Type": "bool"},
+        "RVALID": {"Type": "bool"},
+        "RREADY": {"Type": "bool"},
+        "RRESP": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "AWADDR": {
+          "Type": "integer unsigned",
+          "Width": "64"
+        },
+        "AWID": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "AWUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "WDATA": {
+          "Type": "integer unsigned",
+          "Width": "512"
+        },
+        "WSTRB": {
+          "Type": "integer unsigned",
+          "Width": "64"
+        },
+        "WID": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "WUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "ARADDR": {
+          "Type": "integer unsigned",
+          "Width": "64"
+        },
+        "ARID": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "ARUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "RDATA": {
+          "Type": "integer unsigned",
+          "Width": "512"
+        },
+        "RID": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "RUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "BID": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "BUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        }
+      },
+      "HasOffset": "1",
+      "preferred_usage_value": "MEMORY",
+      "has_dependant_on": "0",
+      "NUM_READ_OUTSTANDING": "16",
+      "NUM_WRITE_OUTSTANDING": "16",
+      "MAX_READ_BURST_LENGTH": "64",
+      "MAX_WRITE_BURST_LENGTH": "64",
+      "port_width": {
+        "ARADDR": "64",
+        "ARID": "1",
+        "ARUSER": "1",
+        "AWADDR": "64",
+        "AWID": "1",
+        "AWUSER": "1",
+        "BID": "1",
+        "BUSER": "1",
+        "RDATA": "512",
+        "RID": "1",
+        "RUSER": "1",
+        "WDATA": "512",
+        "WID": "1",
+        "WSTRB": "64",
+        "WUSER": "1"
+      }
+    },
+    "s_axi_ctrl_reg": {
+      "type": "axi4lite",
+      "is_adaptor": "true",
+      "mode": "slave",
+      "port_prefix": "s_axi_ctrl_reg",
+      "param_prefix": "C_S_AXI_CTRL_REG",
+      "addr_bits": "9",
+      "registers": [
+        {
+          "offset": "0x00",
+          "name": "CTRL",
+          "access": "RW",
+          "reset_value": "0x0",
+          "description": "Control signals",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "AP_START",
+              "access": "RW",
+              "reset_value": "0",
+              "description": "Control signal Register for 'ap_start'."
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "AP_DONE",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal Register for 'ap_done'."
+            },
+            {
+              "offset": "2",
+              "width": "1",
+              "name": "AP_IDLE",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal Register for 'ap_idle'."
+            },
+            {
+              "offset": "3",
+              "width": "1",
+              "name": "AP_READY",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal Register for 'ap_ready'."
+            },
+            {
+              "offset": "4",
+              "width": "3",
+              "name": "RESERVED_1",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            },
+            {
+              "offset": "7",
+              "width": "1",
+              "name": "AUTO_RESTART",
+              "access": "RW",
+              "reset_value": "0",
+              "description": "Control signal Register for 'auto_restart'."
+            },
+            {
+              "offset": "8",
+              "width": "24",
+              "name": "RESERVED_2",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x04",
+          "name": "GIER",
+          "access": "RW",
+          "reset_value": "0x0",
+          "description": "Global Interrupt Enable Register",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "Enable",
+              "access": "RW",
+              "reset_value": "0",
+              "description": "Master enable for the device interrupt output to the system interrupt controller: 0 = Disabled, 1 = Enabled"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x08",
+          "name": "IP_IER",
+          "access": "RW",
+          "reset_value": "0x0",
+          "description": "IP Interrupt Enable Register",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "CHAN0_INT_EN",
+              "access": "RW",
+              "reset_value": "0",
+              "description": "Enable Channel 0 (ap_done) Interrupt.  0 = Disabled, 1 = Enabled."
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "CHAN1_INT_EN",
+              "access": "RW",
+              "reset_value": "0",
+              "description": "Enable Channel 1 (ap_ready) Interrupt.  0 = Disabled, 1 = Enabled."
+            },
+            {
+              "offset": "2",
+              "width": "30",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x0c",
+          "name": "IP_ISR",
+          "access": "RW",
+          "reset_value": "0x0",
+          "description": "IP Interrupt Status Register",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "CHAN0_INT_ST",
+              "access": "RTOW",
+              "reset_value": "0",
+              "description": "Channel 0 (ap_done) Interrupt Status. 0 = No Channel 0 input interrupt, 1 = Channel 0 input interrup"
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "CHAN1_INT_ST",
+              "access": "RTOW",
+              "reset_value": "0",
+              "description": "Channel 1 (ap_ready) Interrupt Status. 0 = No Channel 1 input interrupt, 1 = Channel 1 input interrup"
+            },
+            {
+              "offset": "2",
+              "width": "30",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x30",
+          "name": "din_gmem_V_1",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of din_gmem_V",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "din_gmem_V",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of din_gmem_V"
+            }]
+        },
+        {
+          "offset": "0x34",
+          "name": "din_gmem_V_2",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of din_gmem_V",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "din_gmem_V",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 63 to 32 Data signal of din_gmem_V"
+            }]
+        },
+        {
+          "offset": "0x40",
+          "name": "dout_gmem_V_1",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of dout_gmem_V",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "dout_gmem_V",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of dout_gmem_V"
+            }]
+        },
+        {
+          "offset": "0x44",
+          "name": "dout_gmem_V_2",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of dout_gmem_V",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "dout_gmem_V",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 63 to 32 Data signal of dout_gmem_V"
+            }]
+        },
+        {
+          "offset": "0x100",
+          "name": "act_reg_i_1",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of act_reg_i"
+            }]
+        },
+        {
+          "offset": "0x104",
+          "name": "act_reg_i_2",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 63 to 32 Data signal of act_reg_i"
+            }]
+        },
+        {
+          "offset": "0x108",
+          "name": "act_reg_i_3",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 95 to 64 Data signal of act_reg_i"
+            }]
+        },
+        {
+          "offset": "0x10c",
+          "name": "act_reg_i_4",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 127 to 96 Data signal of act_reg_i"
+            }]
+        },
+        {
+          "offset": "0x110",
+          "name": "act_reg_i_5",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 159 to 128 Data signal of act_reg_i"
+            }]
+        },
+        {
+          "offset": "0x114",
+          "name": "act_reg_i_6",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 191 to 160 Data signal of act_reg_i"
+            }]
+        },
+        {
+          "offset": "0x118",
+          "name": "act_reg_i_7",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 223 to 192 Data signal of act_reg_i"
+            }]
+        },
+        {
+          "offset": "0x11c",
+          "name": "act_reg_i_8",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 255 to 224 Data signal of act_reg_i"
+            }]
+        },
+        {
+          "offset": "0x120",
+          "name": "act_reg_i_9",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 287 to 256 Data signal of act_reg_i"
+            }]
+        },
+        {
+          "offset": "0x124",
+          "name": "act_reg_i_10",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 319 to 288 Data signal of act_reg_i"
+            }]
+        },
+        {
+          "offset": "0x128",
+          "name": "act_reg_i_11",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 351 to 320 Data signal of act_reg_i"
+            }]
+        },
+        {
+          "offset": "0x12c",
+          "name": "act_reg_i_12",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 383 to 352 Data signal of act_reg_i"
+            }]
+        },
+        {
+          "offset": "0x130",
+          "name": "act_reg_i_13",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 415 to 384 Data signal of act_reg_i"
+            }]
+        },
+        {
+          "offset": "0x134",
+          "name": "act_reg_i_14",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 447 to 416 Data signal of act_reg_i"
+            }]
+        },
+        {
+          "offset": "0x138",
+          "name": "act_reg_i_15",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 479 to 448 Data signal of act_reg_i"
+            }]
+        },
+        {
+          "offset": "0x13c",
+          "name": "act_reg_i_16",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 511 to 480 Data signal of act_reg_i"
+            }]
+        },
+        {
+          "offset": "0x140",
+          "name": "act_reg_i_17",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 543 to 512 Data signal of act_reg_i"
+            }]
+        },
+        {
+          "offset": "0x144",
+          "name": "act_reg_i_18",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 575 to 544 Data signal of act_reg_i"
+            }]
+        },
+        {
+          "offset": "0x148",
+          "name": "act_reg_i_19",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 607 to 576 Data signal of act_reg_i"
+            }]
+        },
+        {
+          "offset": "0x14c",
+          "name": "act_reg_i_20",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 639 to 608 Data signal of act_reg_i"
+            }]
+        },
+        {
+          "offset": "0x150",
+          "name": "act_reg_i_21",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 671 to 640 Data signal of act_reg_i"
+            }]
+        },
+        {
+          "offset": "0x154",
+          "name": "act_reg_i_22",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 703 to 672 Data signal of act_reg_i"
+            }]
+        },
+        {
+          "offset": "0x158",
+          "name": "act_reg_i_23",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 735 to 704 Data signal of act_reg_i"
+            }]
+        },
+        {
+          "offset": "0x15c",
+          "name": "act_reg_i_24",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 767 to 736 Data signal of act_reg_i"
+            }]
+        },
+        {
+          "offset": "0x160",
+          "name": "act_reg_i_25",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 799 to 768 Data signal of act_reg_i"
+            }]
+        },
+        {
+          "offset": "0x164",
+          "name": "act_reg_i_26",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 831 to 800 Data signal of act_reg_i"
+            }]
+        },
+        {
+          "offset": "0x168",
+          "name": "act_reg_i_27",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 863 to 832 Data signal of act_reg_i"
+            }]
+        },
+        {
+          "offset": "0x16c",
+          "name": "act_reg_i_28",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 895 to 864 Data signal of act_reg_i"
+            }]
+        },
+        {
+          "offset": "0x170",
+          "name": "act_reg_i_29",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 927 to 896 Data signal of act_reg_i"
+            }]
+        },
+        {
+          "offset": "0x174",
+          "name": "act_reg_i_30",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 959 to 928 Data signal of act_reg_i"
+            }]
+        },
+        {
+          "offset": "0x178",
+          "name": "act_reg_i_31",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 991 to 960 Data signal of act_reg_i"
+            }]
+        },
+        {
+          "offset": "0x180",
+          "name": "act_reg_o_1",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of act_reg_o"
+            }]
+        },
+        {
+          "offset": "0x184",
+          "name": "act_reg_o_2",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 63 to 32 Data signal of act_reg_o"
+            }]
+        },
+        {
+          "offset": "0x188",
+          "name": "act_reg_o_3",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 95 to 64 Data signal of act_reg_o"
+            }]
+        },
+        {
+          "offset": "0x18c",
+          "name": "act_reg_o_4",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 127 to 96 Data signal of act_reg_o"
+            }]
+        },
+        {
+          "offset": "0x190",
+          "name": "act_reg_o_5",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 159 to 128 Data signal of act_reg_o"
+            }]
+        },
+        {
+          "offset": "0x194",
+          "name": "act_reg_o_6",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 191 to 160 Data signal of act_reg_o"
+            }]
+        },
+        {
+          "offset": "0x198",
+          "name": "act_reg_o_7",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 223 to 192 Data signal of act_reg_o"
+            }]
+        },
+        {
+          "offset": "0x19c",
+          "name": "act_reg_o_8",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 255 to 224 Data signal of act_reg_o"
+            }]
+        },
+        {
+          "offset": "0x1a0",
+          "name": "act_reg_o_9",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 287 to 256 Data signal of act_reg_o"
+            }]
+        },
+        {
+          "offset": "0x1a4",
+          "name": "act_reg_o_10",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 319 to 288 Data signal of act_reg_o"
+            }]
+        },
+        {
+          "offset": "0x1a8",
+          "name": "act_reg_o_11",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 351 to 320 Data signal of act_reg_o"
+            }]
+        },
+        {
+          "offset": "0x1ac",
+          "name": "act_reg_o_12",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 383 to 352 Data signal of act_reg_o"
+            }]
+        },
+        {
+          "offset": "0x1b0",
+          "name": "act_reg_o_13",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 415 to 384 Data signal of act_reg_o"
+            }]
+        },
+        {
+          "offset": "0x1b4",
+          "name": "act_reg_o_14",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 447 to 416 Data signal of act_reg_o"
+            }]
+        },
+        {
+          "offset": "0x1b8",
+          "name": "act_reg_o_15",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 479 to 448 Data signal of act_reg_o"
+            }]
+        },
+        {
+          "offset": "0x1bc",
+          "name": "act_reg_o_16",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 511 to 480 Data signal of act_reg_o"
+            }]
+        },
+        {
+          "offset": "0x1c0",
+          "name": "act_reg_o_17",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 543 to 512 Data signal of act_reg_o"
+            }]
+        },
+        {
+          "offset": "0x1c4",
+          "name": "act_reg_o_18",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 575 to 544 Data signal of act_reg_o"
+            }]
+        },
+        {
+          "offset": "0x1c8",
+          "name": "act_reg_o_19",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 607 to 576 Data signal of act_reg_o"
+            }]
+        },
+        {
+          "offset": "0x1cc",
+          "name": "act_reg_o_20",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 639 to 608 Data signal of act_reg_o"
+            }]
+        },
+        {
+          "offset": "0x1d0",
+          "name": "act_reg_o_21",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 671 to 640 Data signal of act_reg_o"
+            }]
+        },
+        {
+          "offset": "0x1d4",
+          "name": "act_reg_o_22",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 703 to 672 Data signal of act_reg_o"
+            }]
+        },
+        {
+          "offset": "0x1d8",
+          "name": "act_reg_o_23",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 735 to 704 Data signal of act_reg_o"
+            }]
+        },
+        {
+          "offset": "0x1dc",
+          "name": "act_reg_o_24",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 767 to 736 Data signal of act_reg_o"
+            }]
+        },
+        {
+          "offset": "0x1e0",
+          "name": "act_reg_o_25",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 799 to 768 Data signal of act_reg_o"
+            }]
+        },
+        {
+          "offset": "0x1e4",
+          "name": "act_reg_o_26",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 831 to 800 Data signal of act_reg_o"
+            }]
+        },
+        {
+          "offset": "0x1e8",
+          "name": "act_reg_o_27",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 863 to 832 Data signal of act_reg_o"
+            }]
+        },
+        {
+          "offset": "0x1ec",
+          "name": "act_reg_o_28",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 895 to 864 Data signal of act_reg_o"
+            }]
+        },
+        {
+          "offset": "0x1f0",
+          "name": "act_reg_o_29",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 927 to 896 Data signal of act_reg_o"
+            }]
+        },
+        {
+          "offset": "0x1f4",
+          "name": "act_reg_o_30",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 959 to 928 Data signal of act_reg_o"
+            }]
+        },
+        {
+          "offset": "0x1f8",
+          "name": "act_reg_o_31",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of act_reg_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "act_reg_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 991 to 960 Data signal of act_reg_o"
+            }]
+        },
+        {
+          "offset": "0x1fc",
+          "name": "act_reg_o_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of act_reg_o",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "act_reg_o_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal act_reg_o_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        }
+      ],
+      "ctype": {
+        "AWVALID": {"Type": "bool"},
+        "AWREADY": {"Type": "bool"},
+        "WVALID": {"Type": "bool"},
+        "WREADY": {"Type": "bool"},
+        "BVALID": {"Type": "bool"},
+        "BREADY": {"Type": "bool"},
+        "BRESP": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "ARVALID": {"Type": "bool"},
+        "ARREADY": {"Type": "bool"},
+        "RVALID": {"Type": "bool"},
+        "RREADY": {"Type": "bool"},
+        "RRESP": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "AWADDR": {
+          "Type": "integer unsigned",
+          "Width": "9"
+        },
+        "WDATA": {
+          "Type": "null",
+          "Width": "32"
+        },
+        "WSTRB": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "ARADDR": {
+          "Type": "integer unsigned",
+          "Width": "9"
+        },
+        "RDATA": {
+          "Type": "null",
+          "Width": "32"
+        }
+      },
+      "data_width": "32",
+      "port_width": {
+        "ARADDR": "9",
+        "AWADDR": "9",
+        "RDATA": "32",
+        "WDATA": "32",
+        "WSTRB": "4"
+      }
+    }
+  },
+  "RtlPorts": {
+    "s_axi_ctrl_reg_AWVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_ctrl_reg_AWREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_ctrl_reg_AWADDR": {
+      "dir": "in",
+      "width": "9"
+    },
+    "s_axi_ctrl_reg_WVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_ctrl_reg_WREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_ctrl_reg_WDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "s_axi_ctrl_reg_WSTRB": {
+      "dir": "in",
+      "width": "4"
+    },
+    "s_axi_ctrl_reg_ARVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_ctrl_reg_ARREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_ctrl_reg_ARADDR": {
+      "dir": "in",
+      "width": "9"
+    },
+    "s_axi_ctrl_reg_RVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_ctrl_reg_RREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_ctrl_reg_RDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "s_axi_ctrl_reg_RRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "s_axi_ctrl_reg_BVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_ctrl_reg_BREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_ctrl_reg_BRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "ap_clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "interrupt": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_host_mem_AWVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_host_mem_AWREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_host_mem_AWADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_host_mem_AWID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_host_mem_AWLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_host_mem_AWSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_host_mem_AWBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_host_mem_AWLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_host_mem_AWCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_host_mem_AWPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_host_mem_AWQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_host_mem_AWREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_host_mem_AWUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_host_mem_WVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_host_mem_WREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_host_mem_WDATA": {
+      "dir": "out",
+      "width": "512"
+    },
+    "m_axi_host_mem_WSTRB": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_host_mem_WLAST": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_host_mem_WID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_host_mem_WUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_host_mem_ARVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_host_mem_ARREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_host_mem_ARADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_host_mem_ARID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_host_mem_ARLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_host_mem_ARSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_host_mem_ARBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_host_mem_ARLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_host_mem_ARCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_host_mem_ARPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_host_mem_ARQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_host_mem_ARREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_host_mem_ARUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_host_mem_RVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_host_mem_RREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_host_mem_RDATA": {
+      "dir": "in",
+      "width": "512"
+    },
+    "m_axi_host_mem_RLAST": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_host_mem_RID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_host_mem_RUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_host_mem_RRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_host_mem_BVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_host_mem_BREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_host_mem_BRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_host_mem_BID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_host_mem_BUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    }
+  },
+  "ModuleInfo": {
+    "Hierarchy": {
+      "ModuleName": "hls_action",
+      "Instances": [{
+          "ModuleName": "process_action",
+          "InstanceName": "grp_process_action_fu_109"
+        }]
+    },
+    "Info": {
+      "process_action": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "hls_action": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      }
+    },
+    "Metrics": {
+      "process_action": {
+        "Latency": {
+          "LatencyBest": "",
+          "LatencyAvg": "",
+          "LatencyWorst": "",
+          "PipelineII": "",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "4.00",
+          "Uncertainty": "0.50",
+          "Estimate": "3.500"
+        },
+        "Loops": [{
+            "Name": "main_loop",
+            "TripCount": "",
+            "Latency": "",
+            "PipelineII": "1",
+            "PipelineDepth": "16"
+          }],
+        "Area": {
+          "BRAM_18K": "2",
+          "FF": "1539",
+          "LUT": "1648",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "hls_action": {
+        "Latency": {
+          "LatencyBest": "",
+          "LatencyAvg": "",
+          "LatencyWorst": "",
+          "PipelineII": "",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "4.00",
+          "Uncertainty": "0.50",
+          "Estimate": "3.500"
+        },
+        "Area": {
+          "BRAM_18K": "60",
+          "FF": "5405",
+          "LUT": "7557",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      }
+    }
+  },
+  "Sdx": {
+    "Target": "none",
+    "ProfileOption": "0",
+    "ProfileType": "none",
+    "XO": "",
+    "KernelName": "hls_action",
+    "EnableXoSwEmu": "1"
+  },
+  "GenData": {
+    "DataVersion": "0.2",
+    "Time": "2020-03-13 07:04:48 CST",
+    "ToolName": "vivado_hls",
+    "ToolVersion": "2019.2"
+  }
+}

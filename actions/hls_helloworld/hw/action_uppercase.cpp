@@ -44,26 +44,39 @@ static int process_action(snap_membus_t *din_gmem,
 
     main_loop:
     while (size > 0) {
-//#pragma HLS PIPELINE
-	word_t text;
-	unsigned char i;
+#pragma HLS PIPELINE
+	word_t xin;
+    	const uint8_t c[4]={1,1,1,1};
+        static uint8_t shift_reg[4]={0,0,0,0};
+	#pragma HLS array partition variable=shift_reg complete dim=1
+        int i=0,j=0;
+        word_t acc;
 
 	/* Limit the number of bytes to process to a 64B word */
 	bytes_to_transfer = MIN(size, BPERDW);
 
         /* Read in one word_t */
-	memcpy((char*) text, din_gmem + i_idx, BPERDW);
+	memcpy((uint8_t*) xin, din_gmem + i_idx, BPERDW);
 
 	/* Convert lower cases to upper cases byte per byte */
     uppercase_conversion:
-	for (i = 0; i < sizeof(text); i++ ) {
-//#pragma HLS UNROLL
-	    if (text[i] >= 'a' && text[i] <= 'z')
-		text[i] = text[i] - ('a' - 'A');
+	for (j = 0; j < sizeof(xin); j++ ) {
+	#pragma HLS PIPELINE
+	TDL:
+	for(i=3;i>0;i--){
+	#pragma HLS unroll factor=3
+	   shift_reg[i]=shift_reg[i-1];
+	}	
+        shift_reg[0]=xin[j];
+ 	//acc[j]=0;
+	MAC:
+	//for(i=3;i>=0;i--){
+	//#pragma HLS unroll factor=4
+	acc[j] 	= shift_reg[0]*c[0]+shift_reg[1]*c[1]+shift_reg[2]*c[2]+shift_reg[3]*c[3];
+	//}	
 	}
-
 	/* Write out one word_t */
-	memcpy(dout_gmem + o_idx, (char*) text, BPERDW);
+	memcpy(dout_gmem + o_idx, (uint8_t*) acc, BPERDW);
 
 	size -= bytes_to_transfer;
 	i_idx++;

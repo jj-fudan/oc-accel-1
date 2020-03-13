@@ -1,0 +1,23 @@
+<AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <config>
+        <config_interface m_axi_addr64="1"/>
+        <schedule model="hls_action"/>
+    </config>
+    <name>
+        <value string="helloworld"/>
+    </name>
+    <project>
+        <value string="hlsUpperCase_xcvu33p-fsvh2104-2-e"/>
+    </project>
+    <targetInfo>
+        <TargetInfo value="xcvu33p:-fsvh2104:-2-e"/>
+    </targetInfo>
+    <libraryList>
+        <library value="xilinx/virtexuplus/virtexuplus" name="DefaultPlatform"/>
+        <library value="xilinx/virtexuplus/virtexuplus_fpv7" name="DefaultPlatform"/>
+    </libraryList>
+    <clockList>
+        <clock default="false" name="default" period="4"/>
+    </clockList>
+</AutoPilot:solution>
+

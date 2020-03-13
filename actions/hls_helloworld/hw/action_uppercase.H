@@ -25,7 +25,7 @@
 #include <action_changecase.h> /* HelloWorld Job definition */
 
 
-typedef char word_t[BPERDW];
+typedef uint8_t word_t[BPERDW];
 //---------------------------------------------------------------------
 // This is generic. Just adapt names for a new action
 // CONTROL is defined and handled by SNAP 
